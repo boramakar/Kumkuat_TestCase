@@ -22,10 +22,12 @@ public interface IListItem
     public GameObject GetGameObject();
 
     /// <summary>
-    /// Toggles the item state between active and inactive.
-    ///
-    /// Used to define highlight state and perform other changes as necessary.
+    /// Enables highlight and arranges layout to be in active format.
     /// </summary>
-    /// <param name="isSelected">True for active. False for inactive.</param>
-    public void ToggleSelect(bool isSelected);
+    public void SetActive();
+    
+    /// <summary>
+    /// Disables highlight and arranges layout to be in inactive format.
+    /// </summary>
+    public void SetInactive();
 }

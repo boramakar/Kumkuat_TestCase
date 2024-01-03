@@ -130,8 +130,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2418634786469805634}
         m_TargetAssemblyTypeName: AttackListItem, Assembly-CSharp
-        m_MethodName: ToggleSelect
-        m_Mode: 6
+        m_MethodName: SetActive
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0888bf0ea9f631d48baab8f464aefeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundImage: {fileID: 4141875333347940927}
-  highlightImage: {fileID: 4726616933946206510}
+  BackgroundImage: {fileID: 4141875333347940927}
+  HighlightImage: {fileID: 4726616933946206510}
   HomeAttackerDisplayParent: {fileID: 2957357191435524898}
   AwayAttackerDisplayParent: {fileID: 7004283030912504575}
   AttackButton: {fileID: 2623275501979171855}

@@ -95,7 +95,7 @@ MonoBehaviour:
     AwayAssists: []
     AwayScores: 
   - HomePlayer:
-      name: Player
+      name: Player1
       logo:
         foregroundIndex: 0
         backgroundIndex: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7243583529404018440}
   - component: {fileID: 7956486364790153180}
   m_Layer: 0
-  m_Name: Pre_Manager_Manager
+  m_Name: Pre_Manager_Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameParameters: {fileID: 11400000, guid: 2073e3884ed549040b37e0d357e6e5c3, type: 2}
-  playerDetails:
-    name: Graxur
+  PlayerDetails:
+    name: Player1
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
-    level: 13
-    goals: 1
+    level: 1
+    goals: 0
+  DummyLists: {fileID: 0}
+  CurrentSelectedItem: {fileID: 0}

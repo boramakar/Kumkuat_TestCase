@@ -3,10 +3,15 @@ using UnityEngine.UI;
 
 public abstract class ListItem : MonoBehaviour, IListItem
 {
-    [Tooltip("Reference to BackgroundImage.")]
-    [SerializeField] protected Image backgroundImage;
-    [Tooltip("Reference to HighlightImage.")]
-    [SerializeField] protected Image highlightImage;
+    #region Serialized-Public-Variables
+
+    [Tooltip("Reference to BackgroundImage.")] [SerializeField]
+    protected Image BackgroundImage;
+
+    [Tooltip("Reference to HighlightImage.")] [SerializeField]
+    protected Image HighlightImage;
+
+    #endregion
 
     #region IListItem
 
@@ -19,13 +24,18 @@ public abstract class ListItem : MonoBehaviour, IListItem
 
     public virtual void SetBackgroundColor(Enums.ListItemBackgroundColorType backgroundColorType)
     {
-        backgroundImage.color =
+        BackgroundImage.color =
             GameManager.Instance.GameParameters.ColorData.ListItemBackgroundColors[backgroundColorType];
     }
-    
-    public virtual void ToggleSelect(bool isSelected)
+
+    public virtual void SetActive()
     {
-        highlightImage.enabled = isSelected;
+        HighlightImage.enabled = true;
+    }
+
+    public virtual void SetInactive()
+    {
+        HighlightImage.enabled = false;
     }
 
     #endregion

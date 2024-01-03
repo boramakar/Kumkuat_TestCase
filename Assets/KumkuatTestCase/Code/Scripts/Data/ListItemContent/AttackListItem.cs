@@ -5,18 +5,23 @@ public class AttackListItem : ListItem
 {
     #region Serialized-Public-Variables
 
-    [Tooltip("Parent and position marker for PlayerLogoDisplay for Home side.")]
-    [SerializeField] private Transform HomeAttackerDisplayParent;
-    [Tooltip("Parent and position marker for PlayerLogoDisplay for Away side.")]
-    [SerializeField] private Transform AwayAttackerDisplayParent;
-    [Tooltip("Reference to AttackButton.")]
-    [SerializeField] private AttackButton AttackButton;
-    [Tooltip("Reference to AttackSlider.")]
-    [SerializeField] private AttackSlider AttackSlider;
-    [Tooltip("Reference to SliderPosition marker for when the item is selected or active.")]
-    [SerializeField] private Transform SliderPositionMarkerActive;
-    [Tooltip("Reference to SliderPosition marker for when the item is unselected and inactive.")]
-    [SerializeField] private Transform SliderPositionMarkerInactive;
+    [Tooltip("Parent and position marker for PlayerLogoDisplay for Home side.")] [SerializeField]
+    private Transform HomeAttackerDisplayParent;
+
+    [Tooltip("Parent and position marker for PlayerLogoDisplay for Away side.")] [SerializeField]
+    private Transform AwayAttackerDisplayParent;
+
+    [Tooltip("Reference to AttackButton.")] [SerializeField]
+    private AttackButton AttackButton;
+
+    [Tooltip("Reference to AttackSlider.")] [SerializeField]
+    private AttackSlider AttackSlider;
+
+    [Tooltip("Reference to SliderPosition marker for when the item is selected or active.")] [SerializeField]
+    private Transform SliderPositionMarkerActive;
+
+    [Tooltip("Reference to SliderPosition marker for when the item is unselected and inactive.")] [SerializeField]
+    private Transform SliderPositionMarkerInactive;
 
     #endregion
 
@@ -38,28 +43,30 @@ public class AttackListItem : ListItem
         if (_data == null)
             return;
 
-        if(IsPrimaryPlayer())
-        {
-            ToggleSelect(true);
-            _isLayoutLocked = true;
-        }
+        bool isPrimaryPlayer = IsPrimaryPlayer();
+        ChangeLayout(isPrimaryPlayer);
+        _isLayoutLocked = isPrimaryPlayer;
+
         AttackSlider.SetScores(_data.HomeScores.Sum(), _data.AwayScores.Sum());
         GenerateAttackerDisplays();
         FillDisplays(data);
     }
 
-    public override void ToggleSelect(bool isSelected)
+    public override void SetActive()
     {
-        var currentSelectedItem = GameManager.Instance.CurrentSelectedItem;
-        if (currentSelectedItem == this) return;
-        
-        if(currentSelectedItem != null)
-            currentSelectedItem.ToggleSelect(false);
+        if (GameManager.Instance.CurrentSelectedItem != null)
+            GameManager.Instance.CurrentSelectedItem.SetInactive();
         GameManager.Instance.CurrentSelectedItem = this;
         
-        base.ToggleSelect(isSelected);
+        base.SetActive();
+        ChangeLayout(true);
+    }
+
+    public override void SetInactive()
+    {
+        base.SetInactive();
         if (!_isLayoutLocked)
-            ChangeLayout(isSelected);
+            ChangeLayout(false);
     }
 
     #endregion
@@ -68,15 +75,15 @@ public class AttackListItem : ListItem
 
     private void ChangeLayout(bool isActive)
     {
-        if(isActive)
+        if (isActive)
         {
-            AttackButton.Enable(_isLayoutLocked);
+            AttackButton.Enable(IsPrimaryPlayer());
         }
         else
         {
             AttackButton.Disable();
         }
-        
+
         AttackSlider.transform.localPosition =
             isActive ? SliderPositionMarkerActive.localPosition : SliderPositionMarkerInactive.localPosition;
     }
