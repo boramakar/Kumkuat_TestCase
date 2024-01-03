@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_Splash.unity
+    guid: 805eeb1a1f6592f4aa79027a042b11fd
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_Loading.unity
+    guid: 4895199ec4f014c48baf92f7f9551d4e
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_MatchList.unity
+    guid: f18452d1640f221498806f61e4837ede
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_MatchDetails.unity
+    guid: 83bbd8ca7bdb7cf4a827c3f4c2b54997
   m_configObjects: {}
