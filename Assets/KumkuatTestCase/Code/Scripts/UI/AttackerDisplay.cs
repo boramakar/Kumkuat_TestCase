@@ -18,6 +18,6 @@ public class AttackerDisplay : MonoBehaviour
         primaryLogoDisplay.SetContent(primaryPlayerData.logo);
         if(secondaryLogoDisplay != null && secondaryPlayerData != null)
             secondaryLogoDisplay.SetContent(secondaryPlayerData.logo);
-        nameDisplay.text = name;
+        nameDisplay.text = primaryPlayerData.name;
     }
 }
