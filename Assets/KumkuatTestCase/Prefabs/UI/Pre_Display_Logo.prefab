@@ -180,10 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e840dc2e073bed4baad713f952aaf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maskImage: {fileID: 5047879532320323504}
-  backgroundImage: {fileID: 4360430956637389521}
-  foregroundImage: {fileID: 578076680966388449}
-  borderImage: {fileID: 739296849849900140}
+  MaskImage: {fileID: 5047879532320323504}
+  BackgroundImage: {fileID: 4360430956637389521}
+  ForegroundImage: {fileID: 578076680966388449}
+  BorderImage: {fileID: 739296849849900140}
 --- !u!1 &7607878167601267608
 GameObject:
   m_ObjectHideFlags: 0

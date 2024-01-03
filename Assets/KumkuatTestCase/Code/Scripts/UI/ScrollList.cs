@@ -7,9 +7,9 @@ public class ScrollList : SerializedMonoBehaviour, IScrollList
     #region Serialized-Public-Variables
 
     [Tooltip("Reference to content of scroll view.")]
-    [SerializeField] private Transform contentParent;
+    [SerializeField] private Transform ContentParent;
     [Tooltip("Prefab to be used to fill the list.")]
-    [SerializeField] private IListItem listItem;
+    [SerializeField] private IListItem ListItemPrefab;
 
     #endregion
 
@@ -25,9 +25,9 @@ public class ScrollList : SerializedMonoBehaviour, IScrollList
 
     private void Awake()
     {
-        _listItemPrefab = listItem.GetGameObject();
+        _listItemPrefab = ListItemPrefab.GetGameObject();
         _listItemHeight = _listItemPrefab.GetComponent<RectTransform>().rect.height;
-        _listItemWidth = contentParent.GetComponent<RectTransform>().rect.width;
+        _listItemWidth = ContentParent.GetComponent<RectTransform>().rect.width;
     }
 
     #endregion
@@ -37,7 +37,7 @@ public class ScrollList : SerializedMonoBehaviour, IScrollList
     public void SetContents(ListItemData[] listItems)
     {
         // Set size of the content area to be exactly as large as the total height of all items
-        contentParent.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, listItems.Length * _listItemHeight);
+        ContentParent.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, listItems.Length * _listItemHeight);
         
         for (int index = 0; index < listItems.Length; index++)
         {
@@ -50,9 +50,9 @@ public class ScrollList : SerializedMonoBehaviour, IScrollList
     // Exists in case we want to refill the list without changing scenes
     public void Clear()
     {
-        for (int index = contentParent.childCount - 1; index >= 0; index--)
+        for (int index = ContentParent.childCount - 1; index >= 0; index--)
         {
-            Destroy(contentParent.GetChild(index));
+            Destroy(ContentParent.GetChild(index));
         }
     }
 
@@ -62,7 +62,7 @@ public class ScrollList : SerializedMonoBehaviour, IScrollList
     
     private GameObject GenerateListItem(int index)
     {
-        GameObject element = Instantiate(listItem.GetGameObject(), Vector3.zero, Quaternion.identity, contentParent);
+        GameObject element = Instantiate(ListItemPrefab.GetGameObject(), Vector3.zero, Quaternion.identity, ContentParent);
         RectTransform rectTransform = element.GetComponent<RectTransform>();
         rectTransform.localPosition = new Vector3(_listItemWidth / 2f, (index + .5f) * -_listItemHeight, 0);
         return element;

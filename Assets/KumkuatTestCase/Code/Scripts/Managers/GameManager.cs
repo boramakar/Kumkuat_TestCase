@@ -1,4 +1,5 @@
 ﻿using HappyTroll;
+using UnityEngine;
 
 public class GameManager : PersistentSingleton<GameManager>
 {
@@ -8,8 +9,9 @@ public class GameManager : PersistentSingleton<GameManager>
 
     #region Dummy-Variables
 
-    public PlayerData playerDetails;
-    public DummyLists dummyLists;
+    public PlayerData PlayerDetails;
+    public DummyLists DummyLists;
+    [HideInInspector] public ListItem CurrentSelectedItem;
 
     #endregion
 

@@ -6,17 +6,17 @@ public class AttackListItem : ListItem
     #region Serialized-Public-Variables
 
     [Tooltip("Parent and position marker for PlayerLogoDisplay for Home side.")]
-    [SerializeField] private Transform homeAttackerDisplayParent;
+    [SerializeField] private Transform HomeAttackerDisplayParent;
     [Tooltip("Parent and position marker for PlayerLogoDisplay for Away side.")]
-    [SerializeField] private Transform awayAttackerDisplayParent;
+    [SerializeField] private Transform AwayAttackerDisplayParent;
     [Tooltip("Reference to AttackButton.")]
-    [SerializeField] private AttackButton attackButton;
+    [SerializeField] private AttackButton AttackButton;
     [Tooltip("Reference to AttackSlider.")]
-    [SerializeField] private AttackSlider attackSlider;
+    [SerializeField] private AttackSlider AttackSlider;
     [Tooltip("Reference to SliderPosition marker for when the item is selected or active.")]
-    [SerializeField] private Transform sliderPositionMarkerActive;
+    [SerializeField] private Transform SliderPositionMarkerActive;
     [Tooltip("Reference to SliderPosition marker for when the item is unselected and inactive.")]
-    [SerializeField] private Transform sliderPositionMarkerInactive;
+    [SerializeField] private Transform SliderPositionMarkerInactive;
 
     #endregion
 
@@ -38,14 +38,25 @@ public class AttackListItem : ListItem
         if (_data == null)
             return;
 
-        _isLayoutLocked = IsPrimaryPlayer();
-        attackSlider.SetScores(_data.HomeScores.Sum(), _data.AwayScores.Sum());
+        if(IsPrimaryPlayer())
+        {
+            ToggleSelect(true);
+            _isLayoutLocked = true;
+        }
+        AttackSlider.SetScores(_data.HomeScores.Sum(), _data.AwayScores.Sum());
         GenerateAttackerDisplays();
         FillDisplays(data);
     }
 
     public override void ToggleSelect(bool isSelected)
     {
+        var currentSelectedItem = GameManager.Instance.CurrentSelectedItem;
+        if (currentSelectedItem == this) return;
+        
+        if(currentSelectedItem != null)
+            currentSelectedItem.ToggleSelect(false);
+        GameManager.Instance.CurrentSelectedItem = this;
+        
         base.ToggleSelect(isSelected);
         if (!_isLayoutLocked)
             ChangeLayout(isSelected);
@@ -57,9 +68,17 @@ public class AttackListItem : ListItem
 
     private void ChangeLayout(bool isActive)
     {
-        attackButton.Enable(isActive);
-        attackSlider.transform.localPosition =
-            isActive ? sliderPositionMarkerActive.localPosition : sliderPositionMarkerInactive.localPosition;
+        if(isActive)
+        {
+            AttackButton.Enable(_isLayoutLocked);
+        }
+        else
+        {
+            AttackButton.Disable();
+        }
+        
+        AttackSlider.transform.localPosition =
+            isActive ? SliderPositionMarkerActive.localPosition : SliderPositionMarkerInactive.localPosition;
     }
 
     private void GenerateAttackerDisplays()
@@ -70,11 +89,11 @@ public class AttackListItem : ListItem
             _data.AwaySupport == null ? Enums.AttackerDisplayType.Solo : Enums.AttackerDisplayType.DuoInverted;
         _homeAttackerDisplay =
             Instantiate(GameManager.Instance.GameParameters.PrefabData.AttackerDisplays[homeAttackerDisplayType],
-                    homeAttackerDisplayParent.position, Quaternion.identity, homeAttackerDisplayParent)
+                    HomeAttackerDisplayParent.position, Quaternion.identity, HomeAttackerDisplayParent)
                 .GetComponent<AttackerDisplay>();
         _awayAttackerDisplay =
             Instantiate(GameManager.Instance.GameParameters.PrefabData.AttackerDisplays[awayAttackerDisplayType],
-                    awayAttackerDisplayParent.position, Quaternion.identity, awayAttackerDisplayParent)
+                    AwayAttackerDisplayParent.position, Quaternion.identity, AwayAttackerDisplayParent)
                 .GetComponent<AttackerDisplay>();
     }
 
@@ -90,15 +109,15 @@ public class AttackListItem : ListItem
 
     #endregion
 
-    #region Encapsulation
+    #region SOLID (?)
 
     private bool IsPrimaryPlayer()
     {
         GameManager gameManager = GameManager.Instance;
-        return _data.HomePlayer.name == gameManager.playerDetails.name ||
-               _data.AwayPlayer.name == gameManager.playerDetails.name ||
-               (_data.HomeSupport != null && _data.HomeSupport.name == gameManager.playerDetails.name) ||
-               (_data.AwaySupport != null && _data.AwaySupport.name == gameManager.playerDetails.name);
+        return _data.HomePlayer.name == gameManager.PlayerDetails.name ||
+               _data.AwayPlayer.name == gameManager.PlayerDetails.name ||
+               (_data.HomeSupport != null && _data.HomeSupport.name == gameManager.PlayerDetails.name) ||
+               (_data.AwaySupport != null && _data.AwaySupport.name == gameManager.PlayerDetails.name);
     }
 
     #endregion

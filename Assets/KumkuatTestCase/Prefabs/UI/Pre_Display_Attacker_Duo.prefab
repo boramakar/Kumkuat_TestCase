@@ -134,6 +134,10 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5252039367117425771, guid: b8f0186c76d8de74696f2be589642c56, type: 3}
+      propertyPath: SecondaryLogoDisplay
+      value: 
+      objectReference: {fileID: 2705850211990211007}
+    - target: {fileID: 5252039367117425771, guid: b8f0186c76d8de74696f2be589642c56, type: 3}
       propertyPath: secondaryLogoDisplay
       value: 
       objectReference: {fileID: 2705850211990211007}

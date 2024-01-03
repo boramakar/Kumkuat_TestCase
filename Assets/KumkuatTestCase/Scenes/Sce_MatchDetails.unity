@@ -631,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299838588800169511, guid: 49de3540f00bb214faff33e4cc00d585, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"listItem","value":$eref:0'
+      value: '"path":"ListItemPrefab","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 2299838588800169511, guid: 49de3540f00bb214faff33e4cc00d585, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
@@ -725,7 +725,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6709310419873134233, guid: 49de3540f00bb214faff33e4cc00d585, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}

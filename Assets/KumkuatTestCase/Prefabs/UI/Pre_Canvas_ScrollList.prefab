@@ -397,10 +397,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: listItem
+    - Name: ListItemPrefab
       Entry: 6
       Data: 
-  contentParent: {fileID: 4887437500603051096}
+  ContentParent: {fileID: 4887437500603051096}
 --- !u!1 &7250823064919213126
 GameObject:
   m_ObjectHideFlags: 0

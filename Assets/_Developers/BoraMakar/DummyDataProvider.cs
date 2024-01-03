@@ -17,16 +17,16 @@ public class DummyDataProvider : MonoBehaviour
         switch (listType)
         {
             case Enums.ListType.Attack:
-                list.SetContents(GameManager.Instance.dummyLists.attackList);
+                list.SetContents(GameManager.Instance.DummyLists.AttackList);
                 break;
             case Enums.ListType.Match:
-                list.SetContents(GameManager.Instance.dummyLists.matchList);
+                list.SetContents(GameManager.Instance.DummyLists.MatchList);
                 break;
             case Enums.ListType.Team:
-                list.SetContents(GameManager.Instance.dummyLists.teamList);
+                list.SetContents(GameManager.Instance.DummyLists.TeamList);
                 break;
             case Enums.ListType.Player:
-                list.SetContents(GameManager.Instance.dummyLists.playerList);
+                list.SetContents(GameManager.Instance.DummyLists.PlayerList);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class AttackSlider : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
-    [SerializeField] private TextMeshProUGUI homeScoreText;
-    [SerializeField] private TextMeshProUGUI awayScoreText;
+    [SerializeField] private Slider Slider;
+    [SerializeField] private TextMeshProUGUI HomeScoreText;
+    [SerializeField] private TextMeshProUGUI AwayScoreText;
 
     /// <summary>
     /// Sets the numbers on each side of the slider and the slider value based on the scores.
@@ -17,8 +17,8 @@ public class AttackSlider : MonoBehaviour
     /// <param name="awayScore"> Score to be displayed on the right side of the slider. </param>
     public void SetScores(int homeScore, int awayScore)
     {
-        homeScoreText.text = homeScore.ToString();
-        awayScoreText.text = awayScore.ToString();
-        slider.value = homeScore * 1f / (homeScore + awayScore);
+        HomeScoreText.text = homeScore.ToString();
+        AwayScoreText.text = awayScore.ToString();
+        Slider.value = homeScore * 1f / (homeScore + awayScore);
     }
 }

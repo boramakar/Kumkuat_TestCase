@@ -21,43 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  attackList:
-  - HomePlayer:
-      name: Player1
-      logo:
-        foregroundIndex: 0
-        backgroundIndex: 0
-        borderIndex: 0
-      level: 1
-      goals: 0
-    HomeSupport:
-      name: Player
-      logo:
-        foregroundIndex: 0
-        backgroundIndex: 0
-        borderIndex: 0
-      level: 1
-      goals: 0
-    HomeAssists: []
-    HomeScores: 
-    AwayPlayer:
-      name: Player2
-      logo:
-        foregroundIndex: 0
-        backgroundIndex: 0
-        borderIndex: 0
-      level: 1
-      goals: 0
-    AwaySupport:
-      name: Player
-      logo:
-        foregroundIndex: 0
-        backgroundIndex: 0
-        borderIndex: 0
-      level: 1
-      goals: 0
-    AwayAssists: []
-    AwayScores: 
+  AttackList:
   - HomePlayer:
       name: Player
       logo:
@@ -418,7 +382,7 @@ MonoBehaviour:
       goals: 0
     AwayAssists: []
     AwayScores: 
-  matchList:
+  MatchList:
   - HomeTeam:
       Name: Team
       Logo:
@@ -555,128 +519,210 @@ MonoBehaviour:
     MatchTime: 22:00
     MatchDate: 03/01
     MatchType: 1
-  playerList:
-  - name: Player1
+  - HomeTeam:
+      Name: Team
+      Logo:
+        foregroundIndex: 0
+        backgroundIndex: 0
+        borderIndex: 0
+      Level: 1
+    AwayTeam:
+      Name: Team
+      Logo:
+        foregroundIndex: 0
+        backgroundIndex: 0
+        borderIndex: 0
+      Level: 1
+    MatchTime: 22:00
+    MatchDate: 03/01
+    MatchType: 1
+  - HomeTeam:
+      Name: Team
+      Logo:
+        foregroundIndex: 0
+        backgroundIndex: 0
+        borderIndex: 0
+      Level: 1
+    AwayTeam:
+      Name: Team
+      Logo:
+        foregroundIndex: 0
+        backgroundIndex: 0
+        borderIndex: 0
+      Level: 1
+    MatchTime: 22:00
+    MatchDate: 03/01
+    MatchType: 1
+  PlayerList:
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player2
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player3
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player4
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player5
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player6
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player7
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player8
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player9
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player10
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  - name: Player11
+  - name: Player
     logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     level: 1
     goals: 0
-  teamList:
-  - Name: Team1
+  TeamList:
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team2
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team3
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team4
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team5
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team6
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team7
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0
       borderIndex: 0
     Level: 1
-  - Name: Team8
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
+    Logo:
+      foregroundIndex: 0
+      backgroundIndex: 0
+      borderIndex: 0
+    Level: 1
+  - Name: Team
     Logo:
       foregroundIndex: 0
       backgroundIndex: 0

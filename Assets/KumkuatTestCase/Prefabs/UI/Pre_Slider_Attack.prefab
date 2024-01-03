@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22b5029e9bb304c8a4c10c09618bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 6565778997367511112}
-  homeScoreText: {fileID: 7381805826360918549}
-  awayScoreText: {fileID: 3491827371490028098}
+  Slider: {fileID: 6565778997367511112}
+  HomeScoreText: {fileID: 7381805826360918549}
+  AwayScoreText: {fileID: 3491827371490028098}
 --- !u!1 &1334773887887830104
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,9 +179,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 507631077561512039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185, y: 45}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -75, y: 32}
   m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7735151324746420666
@@ -465,9 +465,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 507631077561512039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185, y: 45}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: 33}
   m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8444474057520844114

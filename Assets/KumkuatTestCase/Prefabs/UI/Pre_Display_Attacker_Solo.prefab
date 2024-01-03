@@ -184,9 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390a2050ec259874a8ba3dc9a879efdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryLogoDisplay: {fileID: 5532660350537669717}
-  secondaryLogoDisplay: {fileID: 0}
-  nameDisplay: {fileID: 3469197048550878195}
+  PrimaryLogoDisplay: {fileID: 5532660350537669717}
+  SecondaryLogoDisplay: {fileID: 0}
+  NameDisplay: {fileID: 3469197048550878195}
 --- !u!1001 &2552838810188152281
 PrefabInstance:
   m_ObjectHideFlags: 0

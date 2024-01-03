@@ -6,8 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Kumkuat/Dummy/Dummy Lists", fileName = "DummyLists", order = 0)]
 public class DummyLists : SerializedScriptableObject
 {
-    public AttackData[] attackList;
-    public MatchData[] matchList;
-    public PlayerData[] playerList;
-    public TeamData[] teamList;
+    public AttackData[] AttackList;
+    public MatchData[] MatchList;
+    public PlayerData[] PlayerList;
+    public TeamData[] TeamList;
 }

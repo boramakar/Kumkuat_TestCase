@@ -685,6 +685,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7956486364790153180, guid: 4a3c65ce37104f049a04693ae162aa6f, type: 3}
+      propertyPath: DummyLists
+      value: 
+      objectReference: {fileID: 11400000, guid: f1c3a7354d0765e4ba25ee84bf72406f, type: 2}
+    - target: {fileID: 7956486364790153180, guid: 4a3c65ce37104f049a04693ae162aa6f, type: 3}
       propertyPath: dummyLists
       value: 
       objectReference: {fileID: 11400000, guid: f1c3a7354d0765e4ba25ee84bf72406f, type: 2}

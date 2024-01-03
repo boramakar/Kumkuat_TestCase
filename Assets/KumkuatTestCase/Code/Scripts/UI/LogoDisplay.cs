@@ -7,19 +7,23 @@ public class LogoDisplay : MonoBehaviour
 {
     #region Serliazed-Public-Variables
 
-    [SerializeField] private Image maskImage;
-    [SerializeField] private Image backgroundImage;
-    [SerializeField] private Image foregroundImage;
-    [SerializeField] private Image borderImage;
+    [SerializeField] private Image MaskImage;
+    [SerializeField] private Image BackgroundImage;
+    [SerializeField] private Image ForegroundImage;
+    [SerializeField] private Image BorderImage;
 
     #endregion
-    
+
+    #region Frontend
+
     public void SetContent(LogoData logoData)
     {
         Sprite[] playerLogo = LogoManager.Instance.GetPlayerLogo(logoData.backgroundIndex, logoData.foregroundIndex, logoData.borderIndex);
-        foregroundImage.sprite = playerLogo[0];
-        backgroundImage.sprite = playerLogo[1];
-        borderImage.sprite = playerLogo[2];
-        maskImage.sprite = playerLogo[2];
+        ForegroundImage.sprite = playerLogo[0];
+        BackgroundImage.sprite = playerLogo[1];
+        BorderImage.sprite = playerLogo[2];
+        MaskImage.sprite = playerLogo[2];
     }
+
+    #endregion
 }
