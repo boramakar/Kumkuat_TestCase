@@ -18,9 +18,9 @@ public class AttackerDisplay : MonoBehaviour
 
     public void SetContent(PlayerData primaryPlayerData, PlayerData secondaryPlayerData = null)
     {
-        PrimaryLogoDisplay.SetContent(primaryPlayerData.logo);
+        PrimaryLogoDisplay.SetContent(primaryPlayerData.Logo);
         if(SecondaryLogoDisplay != null && secondaryPlayerData != null)
-            SecondaryLogoDisplay.SetContent(secondaryPlayerData.logo);
-        NameDisplay.text = primaryPlayerData.name;
+            SecondaryLogoDisplay.SetContent(secondaryPlayerData.Logo);
+        NameDisplay.text = primaryPlayerData.Name;
     }
 }

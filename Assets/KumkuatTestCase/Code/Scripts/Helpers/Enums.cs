@@ -7,10 +7,10 @@ public class Enums
     {
         SplashScene = 0,
         LoadingScene = 1,
-        TeamList = 4,
-        TeamDetails = 5,
         MatchList = 2,
-        MatchDetails = 3
+        MatchDetails = 3,
+        TeamList = 4,
+        TeamDetails = 5
     }
 
     public enum MatchType

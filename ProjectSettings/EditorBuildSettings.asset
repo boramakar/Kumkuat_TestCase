@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/KumkuatTestCase/Scenes/Sce_MatchDetails.unity
     guid: 83bbd8ca7bdb7cf4a827c3f4c2b54997
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_TeamList.unity
+    guid: a163eb271f6a6584a910e023891f12a2
+  - enabled: 1
+    path: Assets/KumkuatTestCase/Scenes/Sce_TeamDetails.unity
+    guid: 6e7b3bc060db96d48a1eef93f32fb185
   m_configObjects: {}

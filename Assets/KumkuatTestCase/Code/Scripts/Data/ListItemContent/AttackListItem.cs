@@ -121,10 +121,10 @@ public class AttackListItem : ListItem
     private bool IsPrimaryPlayer()
     {
         GameManager gameManager = GameManager.Instance;
-        return _data.HomePlayer.name == gameManager.PlayerDetails.name ||
-               _data.AwayPlayer.name == gameManager.PlayerDetails.name ||
-               (_data.HomeSupport != null && _data.HomeSupport.name == gameManager.PlayerDetails.name) ||
-               (_data.AwaySupport != null && _data.AwaySupport.name == gameManager.PlayerDetails.name);
+        return _data.HomePlayer.Name == gameManager.PlayerDetails.Name ||
+               _data.AwayPlayer.Name == gameManager.PlayerDetails.Name ||
+               (_data.HomeSupport != null && _data.HomeSupport.Name == gameManager.PlayerDetails.Name) ||
+               (_data.AwaySupport != null && _data.AwaySupport.Name == gameManager.PlayerDetails.Name);
     }
 
     #endregion

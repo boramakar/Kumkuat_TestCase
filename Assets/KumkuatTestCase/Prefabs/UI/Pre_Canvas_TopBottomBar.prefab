@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1242879130783247667}
   - component: {fileID: 1312586292795279453}
   m_Layer: 5
-  m_Name: Pre_TopBottomBarCanvas
+  m_Name: Pre_Canvas_TopBottomBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

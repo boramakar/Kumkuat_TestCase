@@ -17,6 +17,8 @@ public class DummyDataProvider : MonoBehaviour
         switch (listType)
         {
             case Enums.ListType.Attack:
+                // This can provide the data from GameManager.Instance.CurrentMatchDetails instead
+                // for logical consistency within this test case. I don't think it's necessary right now.
                 list.SetContents(GameManager.Instance.DummyLists.AttackList);
                 break;
             case Enums.ListType.Match:
@@ -26,6 +28,8 @@ public class DummyDataProvider : MonoBehaviour
                 list.SetContents(GameManager.Instance.DummyLists.TeamList);
                 break;
             case Enums.ListType.Player:
+                // This can provide the data from GameManager.Instance.CurrentTeamDetails instead
+                // for logical consistency within this test case. I don't think it's necessary right now.
                 list.SetContents(GameManager.Instance.DummyLists.PlayerList);
                 break;
             default:

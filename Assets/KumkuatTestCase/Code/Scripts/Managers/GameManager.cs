@@ -12,6 +12,7 @@ public class GameManager : PersistentSingleton<GameManager>
     public PlayerData PlayerDetails;
     public DummyLists DummyLists;
     [HideInInspector] public ListItem CurrentSelectedItem;
+    [HideInInspector] public MatchData CurrentMatchData;
 
     #endregion
 
@@ -19,7 +20,7 @@ public class GameManager : PersistentSingleton<GameManager>
 
     private void Start()
     {
-        TransitionManager.Instance.ChangeScene(Enums.SceneType.MatchDetails);
+        TransitionManager.Instance.ChangeScene(Enums.SceneType.MatchList);
     }
 
     #endregion
